@@ -1,0 +1,284 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Member Management Dashboard</title>
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <style>
+    .material-symbols-outlined {
+      font-size: large;
+      height: 50px;
+      min-width: 50px;
+      border-radius: 12px;
+      line-height: 50px;
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+</head>
+
+<body class="mdc-typography">
+
+
+
+
+
+  <main class="content-container">
+    <!-- Add member Floating action button -->
+
+    <h1 class="mdc-typography--headline4">Mobile Money Biz</h1>
+    <h2 class="mdc-typography--headline6 group-title-mobile">Location: <span id="location-1"></span></h2>
+
+    <div class="actions">
+      <div id="primary-actions" class="state-content active">
+        <div class="loan-status-filter">
+          <div><span class="mdc-typography">Select Booth: </span></div>
+          <div class="mdc-select mdc-select--outlined " id="select-booth">
+            <div class="mdc-select__anchor" role="button" aria-haspopup="listbox"
+              aria-labelledby="demo-pagination-select" tabindex="0">
+              <span class="mdc-select__selected-text-container">
+                <span id="demo-pagination-select" class="mdc-select__selected-text">10</span>
+              </span>
+              <span class="mdc-select__dropdown-icon">
+                <svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5">
+                  <polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd"
+                    points="7 10 12 15 17 10">
+                  </polygon>
+                  <polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd"
+                    points="7 15 12 10 17 15">
+                  </polygon>
+                </svg>
+              </span>
+              <span class="mdc-notched-outline mdc-notched-outline--notched">
+
+                <span class="mdc-notched-outline__leading"></span>
+                <span class="mdc-notched-outline__trailing"></span>
+
+              </span>
+
+            </div>
+            <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth" role="listbox">
+              <ul class="mdc-list">
+                <li class="mdc-list-item mdc-list-item--selected" aria-selected="true" role="option" data-value="">
+                  <span class="mdc-list-item__text">Choose</span>
+                </li>
+                <li class="mdc-list-item" aria-selected="true" role="option" data-value="1">
+                  <span class="mdc-list-item__text">Winna 1</span>
+                </li>
+                <li class="mdc-list-item" role="option" data-value="2">
+                  <span class="mdc-list-item__text">Winna 2</span>
+                </li>
+                <li class="mdc-list-item" role="option" data-value="3">
+                  <span class="mdc-list-item__text">Winna 3</span>
+                </li>
+                <li class="mdc-list-item" role="option" data-value="4">
+                  <span class="mdc-list-item__text">Winna 4</span>
+                </li>
+                <li class="mdc-list-item" role="option" data-value="5">
+                  <span class="mdc-list-item__text">Winna 5</span>
+                </li>
+                <li class="mdc-list-item" role="option" data-value="6">
+                  <span class="mdc-list-item__text">Winna 6</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <h2 class="mdc-typography--headline6 group-title-desktop">Location: <span id="location-2"></span></h2>
+
+
+
+      </div>
+
+
+
+
+    </div>
+    <br>
+    <div class="mdc-data-table " id="member-table">
+
+
+
+      <div class="mdc-data-table__table-container">
+        <table class="mdc-data-table__table" aria-label="Group Members">
+          <thead class="mdc-typography">
+            <tr class="mdc-data-table__header-row">
+
+              <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Service type</th>
+
+              </th>
+              <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric " role="columnheader"
+                scope="col">Revenue</th>
+            </tr>
+          </thead>
+          <tbody class="mdc-data-table__content" id="insertion-point">
+
+           
+
+          </tbody>
+        </table>
+      </div>
+      <div class="mdc-data-table__pagination">
+        <div class="mdc-data-table__pagination-trailing">
+          <div class="mdc-data-table__pagination-rows-per-page">
+            <div class="mdc-data-table__pagination-rows-per-page-label">
+              Rows per page
+            </div>
+
+            <div
+              class="mdc-select mdc-select--outlined mdc-select--no-label mdc-data-table__pagination-rows-per-page-select"
+              id="pagination-select">
+              <div class="mdc-select__anchor" role="button" aria-haspopup="listbox"
+                aria-labelledby="demo-pagination-select" tabindex="0">
+                <span class="mdc-select__selected-text-container">
+                  <span id="demo-pagination-select" class="mdc-select__selected-text">10</span>
+                </span>
+                <span class="mdc-select__dropdown-icon">
+                  <svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5">
+                    <polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd"
+                      points="7 10 12 15 17 10">
+                    </polygon>
+                    <polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd"
+                      points="7 15 12 10 17 15">
+                    </polygon>
+                  </svg>
+                </span>
+                <span class="mdc-notched-outline mdc-notched-outline--notched">
+                  <span class="mdc-notched-outline__leading"></span>
+                  <span class="mdc-notched-outline__trailing"></span>
+                </span>
+              </div>
+              <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth" role="listbox">
+                <ul class="mdc-list">
+                  <li class="mdc-list-item mdc-list-item--selected" aria-selected="true" role="option" data-value="10">
+                    <span class="mdc-list-item__text">10</span>
+                  </li>
+                  <li class="mdc-list-item" role="option" data-value="25">
+                    <span class="mdc-list-item__text">25</span>
+                  </li>
+                  <li class="mdc-list-item" role="option" data-value="100">
+                    <span class="mdc-list-item__text">100</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="mdc-data-table__pagination-navigation">
+            <div class="mdc-data-table__pagination-total">
+              1‑10 of 100
+            </div>
+            <button class="mdc-icon-button material-icons mdc-data-table__pagination-button" data-first-page="true"
+              disabled>
+              <div class="mdc-button__icon material-icons">first_page</div>
+            </button>
+            <button class="mdc-icon-button material-icons mdc-data-table__pagination-button" data-prev-page="true"
+              disabled>
+              <div class="mdc-button__icon material-icons">chevron_left</div>
+            </button>
+            <button class="mdc-icon-button material-icons mdc-data-table__pagination-button" data-next-page="true">
+              <div class="mdc-button__icon material-icons">chevron_right</div>
+            </button>
+            <button class="mdc-icon-button material-icons mdc-data-table__pagination-button" data-last-page="true">
+              <div class="mdc-button__icon material-icons">last_page</div>
+            </button>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+
+
+   
+
+      </main>
+
+      <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+      <script>
+        // Wait for the DOM to load
+        document.addEventListener('DOMContentLoaded', function () {
+
+          // Initialize the MDC data table component
+          const dataTable = new mdc.dataTable.MDCDataTable(document.querySelector('.mdc-data-table'));
+
+          const memberTable = document.getElementById('member-table');
+          // secondary-actions & primary actions containers
+
+
+
+
+          // Initialize the MDC Select component
+          const select = new mdc.select.MDCSelect(document.getElementById('pagination-select'));
+          const selectBooth = new mdc.select.MDCSelect(document.getElementById('select-booth'));
+
+          // Listen for change event
+          selectBooth.listen('MDCSelect:change', () => {
+            console.log('Selected option:', selectBooth.value);
+            // Define the URL you want to fetch data from
+            const apiUrl = `js/data.json`; // This is a demo link,
+            // USE THIS LINK
+            // const apiUrl = `http://localhost:8040/booth/${selectBooth.value}/with-services`;
+            console.log('value:', apiUrl);
+            // Make the API call using the fetch function
+            fetch(apiUrl)
+              .then(response => {
+                // Check if the response status is OK (status code 200)
+                if (response.status === 200) {
+                  // Parse the response JSON data
+                  return response.json();
+                } else {
+                  // Handle the error if the status code is not 200
+                  throw new Error(`Failed to fetch data. Status: ${response.status}`);
+                }
+              })
+              .then(data => {
+                // Work with the JSON data here
+                console.log("JSON Data:", data.bothId);
+                const insertionPoint = document.getElementById("insertion-point");
+
+                document.getElementById("location-1").innerHTML = data.boothLocation;
+                document.getElementById("location-2").innerHTML = data.boothLocation;
+                insertionPoint.innerHTML = "";
+                data.services.forEach(element => {
+                  const htmlString = `
+                    <tr data-row-id="u0" class="mdc-data-table__row">
+                      <td class="mdc-data-table__cell">${element.name}</td>
+                      <td class="mdc-data-table__cell mdc-data-table__cell--numeric phone-number-col">ZMK${element.revenuePerKwacha}</td>
+                    </tr>
+                  `;
+
+                  // Get the element with the ID "insertion-point"
+
+                  // Insert the HTML string into the element
+                  insertionPoint.insertAdjacentHTML("beforeend", htmlString);
+                 
+                });
+
+                // You can process and use the data as needed
+              })
+              .catch(error => {
+                // Handle any errors that occurred during the fetch
+                console.error("Error:", error);
+              });
+
+          });
+
+
+        });
+
+      </script>
+
+</body>
+
+</html>

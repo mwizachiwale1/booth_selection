@@ -1,0 +1,22 @@
+{
+  "bothId": 1,
+  "boothName": "wina1",
+  "boothLocation": "CBD",
+  "services": [
+    {
+      "serviceId": 5,
+      "name": "FNB",
+      "revenuePerKwacha": 0.04
+    },
+    {
+      "serviceId": 2,
+      "name": "MTNMoney",
+      "revenuePerKwacha": 0.06
+    },
+    {
+      "serviceId": 1,
+      "name": "AirtelMoney",
+      "revenuePerKwacha": 0.05
+    }
+  ]
+}

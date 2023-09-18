@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* table */
+:root {
+  --mdc-theme-primary: #002B5C;
+  --mdc-theme-primary-shade-1: #007BC2;
+  --mdc-theme-primary-shade-2: #007BC2;
+  --mdc-theme-secondary: #FF7F0F;
+  --mdc-theme-secondary-shade: #FFBF6B;
+  --mdc-theme-background: #fff;
+  --mdc-theme-surface: #fff;
+  --mdc-theme-error: #b00020;
+}
+
+.mdc-data-table__header-cell {
+  font-weight: 550 !important;
+}
+
+.content-container {
+  padding: 1.5rem;
+
+  /* box-sizing: content-box; */
+  margin: 0px auto;
+  padding-left: 80px;
+  padding-top: 5rem;
+  width: fit-content;
+  border-radius: 0.625rem;
+  /* background: rgba(102, 102, 102, 0.09); */
+}
+
+.hidden {
+  display: none !important;
+}
+
+
+.actions {
+  padding-top: .5rem;
+}
+
+
+#primary-actions {
+  justify-content: space-between;
+  top: -4rem;
+  align-items: center;
+
+}
+.group-title-mobile{
+  display: none;
+}
+
+#secondary-actions {
+  justify-content: right;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  top: 3rem;
+
+
+}
+
+.state-content {
+  transition: top 0.3s ease-out;
+  /* Transition effect for width */
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+#primary-actions.active {
+  top: 0rem;
+}
+
+#secondary-actions.active {
+  top: -3rem;
+}
+
+
+
+
+@media (max-width: 952px) {
+  /* Your CSS styles for screens 952px and narrower go here */
+  .registered-on-col{
+      display: none;
+  }
+}
+
+@media (max-width: 850px) {
+  /* Your CSS styles for screens 850px and narrower go here */
+  .phone-number-col{
+      display: none;
+  }
+}
+
+@media (max-width: 690px) {
+  /* Your CSS styles for screens 690px and narrower go here */
+  .member-id-col{
+      display: none;
+  }
+}
+
+@media (max-width: 632px) {
+  /* Your CSS styles for screens 632px and narrower go here */
+  .edit-button-col{
+      display: none;
+  }
+}
+
+@media (max-width: 610px) {
+  /* Your CSS styles for screens 610px and narrower go here */
+
+  .content-container{
+      padding-left: 10px;
+  }
+  .status-label{
+      flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Your CSS styles for screens 576px and narrower go here */
+  #primary-actions {
+      justify-content: left;
+  
+  }
+  .group-title-mobile{
+      display: block;
+  }
+  .group-title-desktop{
+      display: none;
+  }
+
+}
